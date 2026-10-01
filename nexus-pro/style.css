@@ -1,0 +1,523 @@
+/* ==========================================================================
+   Nexus Pro | style.css  (Part 2: CSS styling and responsive design)
+
+   Contents
+   1. Reset
+   2. Base styles (custom properties, body)
+   3. Typography
+   4. Layout (Grid and Flexbox)
+   5. Components (cards, buttons, form, profile, grass)
+   6. Interaction states (:hover, :focus, :active)
+   7. Responsive design (breakpoints at 37.5em and 64em)
+
+   Naming convention: kebab-case, block-element (e.g. .card-title).
+   Approach: mobile first. Shared classes and inherited values keep the
+   number of selectors low.
+   ========================================================================== */
+
+
+/* 1. RESET ---------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  background: none;
+}
+
+
+/* 2. BASE STYLES ---------------------------------------------------------- */
+:root {
+  /* Font family */
+  --font-main: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+
+  /* Colour scheme */
+  --color-text: #fbf4ff;
+  --color-muted: #e6d6f5;
+  --color-accent: #f4d98a;
+  --color-ink: #2a1348;
+  --color-glass: rgba(48, 24, 84, 0.45);
+  --color-line: rgba(255, 255, 255, 0.25);
+
+  /* Typography scale (ratio 1.333, perfect fourth), all in rem */
+  --step-0: 1rem;
+  --step-1: 1.333rem;
+  --step-2: 1.777rem;
+  --step-3: 2.369rem;
+  --step-4: 3.157rem;
+  --step-5: 4.209rem;
+  --step-6: 5.61rem;
+  --step-7: 7.477rem;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  --radius: 1rem;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--step-0);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: #a67fb5;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* 3. TYPOGRAPHY ----------------------------------------------------------- */
+h1,
+h2,
+h3 {
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+h1 { font-size: var(--step-5); letter-spacing: -0.04em; }
+h2 { font-size: var(--step-3); }
+h3 { font-size: var(--step-1); letter-spacing: -0.01em; }
+
+p {
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.hero-title {
+  font-size: var(--step-5);
+  line-height: 0.9;
+}
+
+.hero-title-light {
+  font-weight: 200;
+}
+
+.hero-lead {
+  font-size: var(--step-1);
+  font-weight: 200;
+  line-height: 1.4;
+  margin: var(--space-3) auto 0;
+  max-width: 24ch;
+}
+
+.eyebrow,
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.panel-title {
+  font-size: var(--step-3);
+  margin-bottom: var(--space-3);
+}
+
+.panel-text {
+  font-size: 1.15rem;
+}
+
+
+/* 4. LAYOUT --------------------------------------------------------------- */
+/* Page layout: CSS Grid with named areas */
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.site-header { grid-area: header; }
+.site-main   { grid-area: main; }
+.site-footer { grid-area: footer; }
+
+/* Header and navigation: Flexbox */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) 5%;
+  background-color: var(--color-glass);
+  border-bottom: 1px solid var(--color-line);
+  backdrop-filter: blur(10px);
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Hero: Flexbox, centred */
+.hero {
+  min-height: 90vh;
+  min-height: calc(100svh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-4) 5%;
+}
+
+/* Content panels */
+.panel {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 5% var(--space-5);
+}
+
+.panel-inner {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+/* Card grid: one column on mobile */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+/* Profile: Grid with named areas */
+.pop {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "photo"
+    "text";
+  justify-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.profile-photo { grid-area: photo; }
+.profile-text  { grid-area: text; }
+
+/* Contact form: Flexbox column */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-1);
+}
+
+/* Contact page fits one screen between header and footer */
+.contact-section {
+  min-height: calc(100svh - 8.5rem);
+  padding-bottom: var(--space-4);
+}
+
+/* Footer */
+.site-footer {
+  padding: var(--space-3) 5%;
+  text-align: center;
+  background-color: var(--color-glass);
+  border-top: 1px solid var(--color-line);
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+
+/* 5. COMPONENTS ----------------------------------------------------------- */
+/* Background sky (responsive image, see <picture> in the HTML) */
+.sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.sky img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(36, 16, 66, 0.38), rgba(36, 16, 66, 0.5));
+}
+
+.site-logo {
+  font-size: var(--step-1);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+/* Cards */
+.card {
+  padding: var(--space-3);
+  background-color: var(--color-glass);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(20, 8, 40, 0.3);
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-title {
+  margin-bottom: var(--space-1);
+  color: var(--color-text);
+}
+
+.card-text {
+  margin: 0;
+}
+
+/* Profile */
+.profile-photo {
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  aspect-ratio: 1;
+  font-size: var(--step-4);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+  background-color: #5b3a8c;
+  border: 3px solid var(--color-accent);
+  border-radius: 50%;
+  box-shadow: 0 20px 60px rgba(20, 8, 40, 0.5);
+}
+
+.profile-name {
+  font-size: var(--step-3);
+  margin-bottom: var(--space-1);
+}
+
+.profile-role {
+  font-size: var(--step-0);
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.profile-note {
+  margin: var(--space-2) 0 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: var(--space-2);
+  padding: 1rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-ink);
+  background-color: var(--color-accent);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(20, 8, 40, 0.35);
+  transition: transform 0.15s, background-color 0.2s, box-shadow 0.2s;
+}
+
+/* Form fields */
+.form-input {
+  width: 100%;
+  margin-bottom: var(--space-2);
+  padding: 0.9rem 1rem;
+  font-weight: 300;
+  color: var(--color-text);
+  background-color: var(--color-glass);
+  border: 1px solid var(--color-line);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-note {
+  margin: var(--space-2) 0 0;
+}
+
+.form-note a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Grass overlay: transparent video fixed to the bottom-left, always in front */
+.grass {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 55vw;
+  height: auto;
+  aspect-ratio: 570 / 422;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 14%);
+}
+
+
+/* 6. INTERACTION STATES --------------------------------------------------- */
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-accent);
+}
+
+.nav-link:active,
+.btn:active {
+  transform: scale(0.96);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: 0 16px 40px rgba(20, 8, 40, 0.45);
+}
+
+.btn:hover {
+  background-color: #fbe9b0;
+  box-shadow: 0 12px 30px rgba(20, 8, 40, 0.5);
+  transform: translateY(-2px);
+}
+
+.form-input:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(244, 217, 138, 0.35);
+}
+
+.nav-link:focus-visible,
+.btn:focus-visible,
+.site-logo:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* 7. RESPONSIVE DESIGN ---------------------------------------------------- */
+/* Mobile (default, under 37.5em / 600px): single column, set above. */
+
+/* Tablet: 37.5em (600px) and up */
+@media (min-width: 37.5em) {
+  .panel-title { font-size: var(--step-4); }
+  .hero-title { font-size: var(--step-6); }
+  .hero-lead { font-size: var(--step-2); }
+  .profile-name { font-size: var(--step-4); }
+
+  .site-header { padding-inline: 6%; }
+  .nav-link { padding: 0.5rem 0.9rem; font-size: 1rem; }
+
+  /* Two-column card grid */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Profile switches to two columns: photo beside text */
+  .pop {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "photo text";
+    justify-items: start;
+    text-align: left;
+  }
+
+  .profile-photo { width: 14rem; }
+  .grass { width: 45vw; }
+}
+
+/* Desktop: 64em (1024px) and up */
+@media (min-width: 64em) {
+  .hero-title { font-size: var(--step-7); }
+  .hero-lead { font-size: var(--step-3); }
+
+  /* Content sits on the right so the grass has room on the left */
+  .panel-inner,
+  .pop {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .panel { padding-right: 8%; }
+  .profile-photo { width: 16rem; }
+  .grass { width: min(40vw, 36rem); }
+}

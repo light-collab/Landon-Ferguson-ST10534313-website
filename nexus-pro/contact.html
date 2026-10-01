@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nexus Pro builds websites and systems to help make your life better.">
+<title>Nexus Pro | Contact</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-grass="always">
+
+<picture class="sky">
+  <source media="(min-width: 64em)" srcset="assets/sky-1200.jpg">
+  <source media="(min-width: 37.5em)" srcset="assets/sky-900.jpg">
+  <img src="assets/sky-600.jpg" srcset="assets/sky-600.jpg 600w, assets/sky-900.jpg 900w, assets/sky-1200.jpg 1200w" sizes="100vw" alt="">
+</picture>
+
+<header class="site-header">
+  <a class="site-logo" href="index.html">Nexus Pro</a>
+  <nav class="site-nav" aria-label="Main">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" aria-current="page" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="site-main">
+
+  <section class="panel contact-section">
+    <div class="panel-inner">
+      <p class="eyebrow">Contact</p>
+      <h1 class="panel-title">Let us set up a time.</h1>
+      <form class="contact-form" id="contact-form">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-input" id="name" name="name" type="text" autocomplete="name" required>
+        <label class="form-label" for="email">Email</label>
+        <input class="form-input" id="email" name="email" type="email" autocomplete="email" required>
+        <button class="btn" type="submit">Send</button>
+        <p class="form-note" id="form-note" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="footer-text">&copy; 2026 Nexus Pro</p>
+</footer>
+
+<video class="grass" src="assets/grass.webm" autoplay muted loop playsinline aria-hidden="true"></video>
+<audio id="music" src="assets/calm.m4a" loop preload="auto"></audio>
+<script src="script.js"></script>
+</body>
+</html>

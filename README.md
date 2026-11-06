@@ -213,17 +213,16 @@ Automated browser tests (headless Chromium) at 375px, 768px and 1280px covered: 
 
 Part 2 was marked 66/100. Each correction below is tied to a comment in the marking feedback.
 
-| Feedback received | What was changed | Files |
-| --- | --- | --- |
-| Navigation (0/5): "Menu should be switched to a hamburger menu in mobile and tablet view." | Added a hamburger button with an animated icon. Below 64em the links collapse into a menu that opens with a height transition, closes on Escape, outside click and resize, and uses `aria-expanded`, `aria-controls` and `inert`. From 64em the full links show and the button is hidden. If JavaScript fails, the links stay visible. | `style.css` section 13a, `script.js` section 9, all HTML pages |
-| Images (0/5): "No images." | Added a "What we build" section with three showcase pictures, each in three widths and two formats (`<picture>`, `srcset`, `sizes`, WebP with JPEG fallback, `loading="lazy"`, `width` and `height`, descriptive `alt`). Added eight SVG service illustrations shown on the service cards and in the modal. | `index.html`, `services.html`, `js/services.js`, `data/services.json`, `assets/images/`, `style.css` section 13e |
-| Layout adjustment (3/5): "Tablet view could be improved, elements could fill the screen better." | On tablets (600px to 1023px) the root font size is raised to 112.5% and the content width to 46rem, so panels, cards and spacing fill the screen. | `style.css` section 13b |
-| Layout adjustment: "Grass blocks off text in mobile view." | The grass video now sits behind the content on mobile and tablet (and is softer), and stays in front only on desktop where the content is on the right. | `style.css` section 13c, `script.js` section 1 |
-| Typography adjustment (3/5): "Text could be larger in tablet view, it is small and a bit difficult to read." | Larger body text on tablets through the root size and larger paragraph, card and accordion text. | `style.css` section 13b |
-| Decoration and colour (3/5): "Insufficient use of decoration." | Added drifting gradient glows in the hero, gradient hero text, accent lines on eyebrows and titles, gradient card top borders, icon badges on the "Why now" cards, gradient buttons with a glow on hover, and a soft footer gradient. | `style.css` section 13d, `index.html` |
-| GitHub (0/5): "No use of GitHub!" | The project is now a Git repository with multiple descriptive commits, ready to push to GitHub. | `.git` history |
+ Feedback received | What was changed ,Files 
+ Navigation (0/5): "Menu should be switched to a hamburger menu in mobile and tablet view." | Added a hamburger button with an animated icon. Below 64em the links collapse into a menu that opens with a height transition, closes on Escape, outside click and resize, and uses `aria-expanded`, `aria-controls` and `inert`. From 64em the full links show and the button is hidden. If JavaScript fails, the links stay visible. `style.css` section 13a, `script.js` section 9, all HTML pages 
+ Images (0/5): "No images."  Added a "What we build" section with three showcase pictures, each in three widths and two formats (`<picture>`, `srcset`, `sizes`, WebP with JPEG fallback, `loading="lazy"`, `width` and `height`, descriptive `alt`). Added eight SVG service illustrations shown on the service cards and in the modal. | `index.html`, `services.html`, `js/services.js`, `data/services.json`, `assets/images/`, `style.css` section 13e 
+ Layout adjustment (3/5): "Tablet view could be improved, elements could fill the screen better." | On tablets (600px to 1023px) the root font size is raised to 112.5% and the content width to 46rem, so panels, cards and spacing fill the screen.  `style.css` section 13b 
+ Layout adjustment: "Grass blocks off text in mobile view." | The grass video now sits behind the content on mobile and tablet (and is softer), and stays in front only on desktop where the content is on the right. `style.css` section 13c, `script.js` section 1.
+ Typography adjustment (3/5): "Text could be larger in tablet view, it is small and a bit difficult to read." | Larger body text on tablets through the root size and larger paragraph, card and accordion text. `style.css` section 13b 
+| Decoration and colour (3/5): "Insufficient use of decoration."  Added drifting gradient glows in the hero, gradient hero text, accent lines on eyebrows and titles, gradient card top borders, icon badges on the "Why now" cards, gradient buttons with a glow on hover, and a soft footer gradient.  `style.css` section 13d, `index.html` 
+| GitHub (0/5): "No use of GitHub!" | The project is now a Git repository with multiple descriptive commits, ready to push to GitHub.  `.git` history 
 | README (2/5): missing student information, goals and objectives, key features, timeline and milestones, sitemap and references. | Added every missing section: Student information, Website goals and objectives, Key features and functionality, Sitemap (diagram and tree), Timeline and milestones, and References. | `README.md` |
-| References (0/5): "No references!" | Added in-text Harvard citations throughout this document and a matching reference list. | `README.md` |
+| References (0/5): "No references, this was a mistake on my part!" | Added in-text Harvard citations throughout this document and a matching reference list. | `README.md` |
 | AI disclosure penalty | Added an AI use disclosure section. | `README.md` |
 | Feedback for Part 1 (5/10): "Could not give feedback for part 1." | No Part 1 feedback was available. The changelog now records every Part 2 correction in detail, as required. | `README.md` |
 
@@ -273,8 +272,6 @@ GitHub (n.d.) *GitHub Pages documentation*. Available at: https://docs.github.co
 Google (n.d.) *Introduction to robots.txt*. Google Search Central. Available at: https://developers.google.com/search/docs/crawling-indexing/robots/intro (Accessed: 3 November 2026).
 
 MDN Web Docs (n.d.) *\<dialog\>: The Dialog element*. Mozilla. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog (Accessed: 3 November 2026).
-
-Netlify (n.d.) *Netlify Docs*. Available at: https://docs.netlify.com/ (Accessed: 3 November 2026).
 
 OpenStreetMap contributors (n.d.) *Copyright and licence*. Available at: https://www.openstreetmap.org/copyright (Accessed: 3 November 2026).
 

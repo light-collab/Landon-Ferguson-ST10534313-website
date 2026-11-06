@@ -5,8 +5,6 @@ A website for Nexus Pro, a Strand-based studio that builds websites and business
 - **Part 2:** CSS styling and responsive design
 - **Part 3:** JavaScript functionality, forms and validation, SEO, GitHub and deployment
 
-Live site: https://nexus-pro.netlify.app
-
 ## Student information
 
 | | |

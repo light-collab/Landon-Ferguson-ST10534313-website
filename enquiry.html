@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get a Website Quote in Strand | Nexus Pro Enquiry</title>
+<meta name="description" content="Request a website or systems quote from Nexus Pro. Choose a service and get an instant estimate of cost, delivery time and earliest start date.">
+<link rel="canonical" href="https://nexus-pro.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nexus Pro">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:title" content="Get a Website Quote in Strand | Nexus Pro Enquiry">
+<meta property="og:description" content="Request a website or systems quote from Nexus Pro. Choose a service and get an instant estimate of cost, delivery time and earliest start date.">
+<meta property="og:url" content="https://nexus-pro.netlify.app/enquiry.html">
+<meta property="og:image" content="https://nexus-pro.netlify.app/assets/nexus-pro-social-preview.jpg">
+<meta property="og:image:alt" content="Nexus Pro: websites and systems that work">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a1348">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<picture class="sky">
+  <source media="(min-width: 64em)" srcset="assets/purple-sky-background-1200.jpg">
+  <source media="(min-width: 37.5em)" srcset="assets/purple-sky-background-900.jpg">
+  <img src="assets/purple-sky-background-600.jpg" srcset="assets/purple-sky-background-600.jpg 600w, assets/purple-sky-background-900.jpg 900w, assets/purple-sky-background-1200.jpg 1200w" sizes="100vw" alt="" width="1200" height="881" fetchpriority="high">
+</picture>
+
+<header class="site-header">
+  <a class="site-logo" href="index.html">Nexus Pro</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+    <span class="visually-hidden">Menu</span>
+  </button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="services.html">Services</a></li>
+      <li><a class="nav-link" aria-current="page" href="enquiry.html">Enquiry</a></li>
+      <li><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="site-main" id="main">
+
+  <section class="panel panel-top">
+    <div class="panel-inner">
+      <p class="eyebrow">Enquiry</p>
+      <h1 class="panel-title">Get your instant estimate.</h1>
+      <p class="panel-text">Tell us what you need and we will show the estimated cost, delivery time and our earliest start date straight away. Prefer to talk first? <a class="text-link" href="contact.html">Contact us</a>. Not sure what to pick? <a class="text-link" href="services.html">Browse the services</a>.</p>
+      <form class="contact-form" id="enquiry-form" name="enquiry" method="post" action="thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="enquiry">
+        <p class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-summary" id="form-summary" role="alert" hidden></div>
+        <div class="form-field">
+  <label class="form-label" for="name">Name</label>
+  <input class="form-input" id="name" name="name" type="text" minlength="2" maxlength="60" autocomplete="name" data-rule="name" required aria-describedby="name-error">
+  <p class="form-error" id="name-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="email">Email</label>
+  <input class="form-input" id="email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+  <p class="form-error" id="email-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="phone">Phone <span class="form-optional">(optional)</span></label>
+  <p class="form-hint" id="phone-hint">For example 021 123 4567 or +27 82 123 4567.</p>
+  <input class="form-input" id="phone" name="phone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel" pattern="[0-9+ \-]{{9,20}}" data-rule="phone" aria-describedby="phone-hint phone-error">
+  <p class="form-error" id="phone-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="service">Service</label>
+  <select class="form-input" id="service" name="service" required  aria-describedby="service-error"><option value="">Choose a service</option><option value="starter-website">Starter Website</option><option value="business-website">Business Website</option><option value="online-store">Online Store</option><option value="booking-system">Booking System</option><option value="client-portal">Client Portal</option><option value="process-automation">Process Automation</option><option value="seo-local-visibility">SEO and Local Visibility</option><option value="website-care-plan">Website Care Plan</option></select>
+  <p class="form-error" id="service-error"></p>
+</div>
+
+        <fieldset class="form-fieldset">
+          <legend class="form-label">Size of project</legend>
+          <label class="choice" for="scope-small"><input type="radio" id="scope-small" name="scope" value="small"><span>Small: the essentials</span></label>
+<label class="choice" for="scope-standard"><input type="radio" id="scope-standard" name="scope" value="standard" checked><span>Standard: most businesses</span></label>
+<label class="choice" for="scope-large"><input type="radio" id="scope-large" name="scope" value="large"><span>Large: lots of content or custom features</span></label>
+
+        </fieldset>
+        <fieldset class="form-fieldset">
+          <legend class="form-label">Add-ons <span class="form-optional">(optional)</span></legend>
+          <label class="choice" for="addons-copy"><input type="checkbox" id="addons-copy" name="addons" value="copy"><span>Copywriting help (+R1&nbsp;500)</span></label>
+<label class="choice" for="addons-brand"><input type="checkbox" id="addons-brand" name="addons" value="brand"><span>Logo and brand refresh (+R2&nbsp;500)</span></label>
+<label class="choice" for="addons-language"><input type="checkbox" id="addons-language" name="addons" value="language"><span>Extra language (+R1&nbsp;200)</span></label>
+<label class="choice" for="addons-rush"><input type="checkbox" id="addons-rush" name="addons" value="rush"><span>Rush delivery (+25% cost, 30% faster)</span></label>
+
+        </fieldset>
+        <div class="form-field">
+  <label class="form-label" for="start-date">Preferred start date <span class="form-optional">(optional)</span></label>
+  <p class="form-hint" id="start-date-hint">We start new projects on Mondays.</p>
+  <input class="form-input" id="start-date" name="start-date" type="date"  aria-describedby="start-date-hint start-date-error">
+  <p class="form-error" id="start-date-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="message">About your project</label>
+  <textarea class="form-input" id="message" name="message" rows="5" minlength="20" maxlength="600" required aria-describedby="message-error"></textarea>
+  <p class="form-error" id="message-error"></p>
+</div>
+
+        <p class="form-counter" id="message-counter" aria-hidden="true">0 / 600</p>
+        <button class="btn" type="submit" id="submit-btn">Get my estimate</button>
+      </form>
+
+      <section class="result" id="enquiry-result" tabindex="-1" aria-labelledby="result-title" hidden>
+        <h2 class="result-title" id="result-title">Your estimate</h2>
+        <dl class="result-list" id="result-list"></dl>
+        <p class="result-note" id="result-note"></p>
+        <p class="result-note" id="result-status"></p>
+        <div class="result-actions">
+          <button class="btn btn-ghost btn-small" id="edit-enquiry" type="button">Edit my enquiry</button>
+          <a class="btn btn-small" href="contact.html">Talk to us about it</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-text">&copy; 2026 Nexus Pro &middot; Strand, Western Cape</p>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav>
+    <button class="footer-share" type="button" data-share>Share this site</button>
+  </div>
+</footer>
+
+<audio id="music" src="assets/calm.m4a" loop preload="metadata"></audio>
+<script src="script.js" defer></script>
+<script src="js/forms.js" defer></script>
+</body>
+</html>

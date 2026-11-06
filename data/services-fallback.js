@@ -1,0 +1,174 @@
+/* Nexus Pro | Offline copy of data/services.json.
+   Used only when fetch() is blocked (for example when a page is opened by double-clicking the file).
+   Keep it identical to services.json when you edit prices. */
+window.NEXUS_SERVICES = {
+  "categories": [
+    {
+      "id": "websites",
+      "label": "Websites"
+    },
+    {
+      "id": "systems",
+      "label": "Systems"
+    },
+    {
+      "id": "growth",
+      "label": "Growth and care"
+    }
+  ],
+  "services": [
+    {
+      "id": "starter-website",
+      "name": "Starter Website",
+      "category": "websites",
+      "rank": 2,
+      "summary": "A clean one to three page site so customers can find you and contact you.",
+      "description": "The fastest way to get a professional presence online. Ideal for sole traders and new businesses that need to be found and contacted.",
+      "price": 4500,
+      "unit": "once",
+      "weeks": 2,
+      "features": [
+        "Up to 3 pages",
+        "Mobile-friendly design",
+        "Contact form",
+        "Basic search engine setup"
+      ],
+      "image": "assets/images/website-starter.jpg",
+      "imageAlt": "Laptop showing a clean website on a desk"
+    },
+    {
+      "id": "business-website",
+      "name": "Business Website",
+      "category": "websites",
+      "rank": 1,
+      "summary": "A complete multi-page site with search engine setup and analytics.",
+      "description": "Our most popular package. A full website that explains what you do, builds trust and turns visitors into enquiries.",
+      "price": 9500,
+      "unit": "once",
+      "weeks": 4,
+      "features": [
+        "Up to 8 pages",
+        "Search engine setup and sitemap",
+        "Google Business Profile guidance",
+        "Visitor analytics",
+        "Enquiry form with spam protection"
+      ],
+      "image": "assets/images/website-business.jpg",
+      "imageAlt": "Laptop showing a website layout with a woman leaning beside it"
+    },
+    {
+      "id": "online-store",
+      "name": "Online Store",
+      "category": "websites",
+      "rank": 5,
+      "summary": "Sell products online with a catalogue, cart and secure payments.",
+      "description": "A store that handles your catalogue, orders and payments so you can sell around the clock.",
+      "price": 18000,
+      "unit": "once",
+      "weeks": 6,
+      "features": [
+        "Product catalogue with search",
+        "Shopping cart and checkout",
+        "Payment gateway integration",
+        "Order email notifications"
+      ],
+      "image": "assets/images/online-store.jpg",
+      "imageAlt": "Miniature shopping cart with boxes in front of a laptop"
+    },
+    {
+      "id": "booking-system",
+      "name": "Booking System",
+      "category": "systems",
+      "rank": 3,
+      "summary": "Let customers book appointments online, day or night.",
+      "description": "Stop juggling calls and messages. Customers pick a time that suits them and you get a clean diary.",
+      "price": 12000,
+      "unit": "once",
+      "weeks": 4,
+      "features": [
+        "Online appointment calendar",
+        "Email confirmations and reminders",
+        "Admin view of all bookings",
+        "Works inside your existing website"
+      ],
+      "image": "assets/images/booking-system.jpg",
+      "imageAlt": "Booking screen with activities and a calendar of available dates"
+    },
+    {
+      "id": "client-portal",
+      "name": "Client Portal",
+      "category": "systems",
+      "rank": 6,
+      "summary": "A private login area where clients see their orders, files and status.",
+      "description": "Give clients one place to check progress and download documents, and save yourself the status calls.",
+      "price": 22000,
+      "unit": "once",
+      "weeks": 8,
+      "features": [
+        "Secure client login",
+        "Dashboard with project status",
+        "File sharing",
+        "Admin tools for your team"
+      ],
+      "image": "assets/images/client-portal.jpg",
+      "imageAlt": "List of client portal benefits next to a smiling shop owner"
+    },
+    {
+      "id": "process-automation",
+      "name": "Process Automation",
+      "category": "systems",
+      "rank": 4,
+      "summary": "Connect your forms, email and spreadsheets so repetitive work does itself.",
+      "description": "We find the tasks that eat your week and automate them: enquiries filed automatically, replies sent on time, reports built for you.",
+      "price": 6500,
+      "unit": "once",
+      "weeks": 2,
+      "features": [
+        "Workflow review",
+        "Form to spreadsheet and email automation",
+        "Automatic follow-up messages",
+        "Handover guide"
+      ],
+      "image": "assets/images/process-automation.jpg",
+      "imageAlt": "Automation icons connected around a central gears symbol"
+    },
+    {
+      "id": "seo-local-visibility",
+      "name": "SEO and Local Visibility",
+      "category": "growth",
+      "rank": 7,
+      "summary": "Show up when people in your area search for what you do.",
+      "description": "A focused tune-up that helps nearby customers find you: keywords, page structure and your Google Business Profile.",
+      "price": 3500,
+      "unit": "once",
+      "weeks": 1,
+      "features": [
+        "Keyword research for your area",
+        "On-page improvements",
+        "Google Business Profile setup",
+        "Plain-language report"
+      ],
+      "image": "assets/images/local-visibility.jpg",
+      "imageAlt": "Phone showing a business on Google Maps with a number one medal"
+    },
+    {
+      "id": "website-care-plan",
+      "name": "Website Care Plan",
+      "category": "growth",
+      "rank": 8,
+      "summary": "Monthly updates, backups and security checks so your site stays healthy.",
+      "description": "Your website kept fast, secure and up to date, with a real person to call when you need a change.",
+      "price": 750,
+      "unit": "month",
+      "weeks": 0,
+      "features": [
+        "Monthly content updates",
+        "Regular backups",
+        "Security and uptime checks",
+        "Priority support"
+      ],
+      "image": "assets/images/website-care-plan.jpg",
+      "imageAlt": "Two people reviewing a checklist and chart on a screen"
+    }
+  ]
+};

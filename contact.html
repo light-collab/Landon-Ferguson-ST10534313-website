@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Nexus Pro | Strand Web Developer</title>
+<meta name="description" content="Contact Nexus Pro in Strand, Western Cape. Send a message, find our service area on the map and get a reply about your website project.">
+<link rel="canonical" href="https://nexus-pro.netlify.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nexus Pro">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:title" content="Contact Nexus Pro | Strand Web Developer">
+<meta property="og:description" content="Contact Nexus Pro in Strand, Western Cape. Send a message, find our service area on the map and get a reply about your website project.">
+<meta property="og:url" content="https://nexus-pro.netlify.app/contact.html">
+<meta property="og:image" content="https://nexus-pro.netlify.app/assets/nexus-pro-social-preview.jpg">
+<meta property="og:image:alt" content="Nexus Pro: websites and systems that work">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a1348">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-grass="always">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<picture class="sky">
+  <source media="(min-width: 64em)" srcset="assets/purple-sky-background-1200.jpg">
+  <source media="(min-width: 37.5em)" srcset="assets/purple-sky-background-900.jpg">
+  <img src="assets/purple-sky-background-600.jpg" srcset="assets/purple-sky-background-600.jpg 600w, assets/purple-sky-background-900.jpg 900w, assets/purple-sky-background-1200.jpg 1200w" sizes="100vw" alt="" width="1200" height="881" fetchpriority="high">
+</picture>
+
+<header class="site-header">
+  <a class="site-logo" href="index.html">Nexus Pro</a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+    <span class="visually-hidden">Menu</span>
+  </button>
+  <nav class="site-nav" id="site-nav" aria-label="Main">
+    <ul class="nav-list">
+      <li><a class="nav-link" href="index.html">Home</a></li>
+      <li><a class="nav-link" href="about.html">About</a></li>
+      <li><a class="nav-link" href="services.html">Services</a></li>
+      <li><a class="nav-link" href="enquiry.html">Enquiry</a></li>
+      <li><a class="nav-link" aria-current="page" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="site-main" id="main">
+
+  <section class="panel contact-section">
+    <div class="panel-inner">
+      <p class="eyebrow">Contact</p>
+      <h1 class="panel-title">Let us set up a time.</h1>
+      <p class="panel-text">Send us a message and we will prepare the email for you. Want pricing first? Try the <a class="text-link" href="enquiry.html">instant estimate</a>.</p>
+      <form class="contact-form" id="contact-form" name="contact" method="post" action="thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp-field" aria-hidden="true"><label>Leave this field empty <input type="text" name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form-summary" id="form-summary" role="alert" hidden></div>
+        <div class="form-field">
+  <label class="form-label" for="name">Name</label>
+  <input class="form-input" id="name" name="name" type="text" minlength="2" maxlength="60" autocomplete="name" data-rule="name" required aria-describedby="name-error">
+  <p class="form-error" id="name-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="email">Email</label>
+  <input class="form-input" id="email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email" required aria-describedby="email-error">
+  <p class="form-error" id="email-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="phone">Phone <span class="form-optional">(optional)</span></label>
+  <p class="form-hint" id="phone-hint">For example 021 123 4567 or +27 82 123 4567.</p>
+  <input class="form-input" id="phone" name="phone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel" pattern="[0-9+ \-]{{9,20}}" data-rule="phone" aria-describedby="phone-hint phone-error">
+  <p class="form-error" id="phone-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="topic">Type of message</label>
+  <select class="form-input" id="topic" name="topic" required  aria-describedby="topic-error"><option value="">Choose a topic</option><option value="General question">General question</option><option value="Support for an existing website">Support for an existing website</option><option value="Partnership">Partnership</option><option value="Feedback">Feedback</option></select>
+  <p class="form-error" id="topic-error"></p>
+</div>
+
+        <div class="form-field">
+  <label class="form-label" for="message">Your message</label>
+  <textarea class="form-input" id="message" name="message" rows="6" minlength="20" maxlength="1000" required aria-describedby="message-error"></textarea>
+  <p class="form-error" id="message-error"></p>
+</div>
+
+        <p class="form-counter" id="message-counter" aria-hidden="true">0 / 1000</p>
+        <button class="btn" type="submit" id="submit-btn">Prepare my email</button>
+      </form>
+
+      <section class="result" id="email-result" tabindex="-1" aria-labelledby="email-result-title" hidden>
+        <h2 class="result-title" id="email-result-title">Your email is ready</h2>
+        <p class="result-note" id="email-result-status"></p>
+        <pre class="email-preview" id="email-preview" tabindex="0" aria-label="Email preview"></pre>
+        <div class="result-actions">
+          <a class="btn btn-small" id="email-send" href="contact.html">Open in my email app</a>
+          <button class="btn btn-ghost btn-small" id="email-copy" type="button">Copy email text</button>
+        </div>
+        <p class="form-note" id="email-copy-status" role="status"></p>
+      </section>
+    </div>
+  </section>
+
+  <section class="panel panel-compact" id="where-we-work">
+    <div class="panel-inner">
+      <p class="eyebrow">Where we work</p>
+      <h2 class="panel-title">Based in Strand, serving the Western Cape.</h2>
+      <p class="panel-text">Our usual in-person service area is around Strand and Cape Town. Outside it, we still build and support websites remotely.</p>
+      <figure class="map-image"><img src="assets/images/cape-town-map.jpg" alt="Street map of Cape Town and Table Bay" width="500" height="535" loading="lazy" decoding="async"></figure>
+      <div class="map-actions">
+        <button class="btn btn-ghost btn-small" id="locate-btn" type="button">Am I in the service area?</button>
+        <p class="form-note" id="locate-status" role="status"></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-text">&copy; 2026 Nexus Pro &middot; Strand, Western Cape</p>
+    <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a></nav>
+    <button class="footer-share" type="button" data-share>Share this site</button>
+  </div>
+</footer>
+
+<video class="grass" src="assets/grass.webm" muted loop playsinline preload="none" width="570" height="422" aria-hidden="true"></video>
+<audio id="music" src="assets/calm.m4a" loop preload="metadata"></audio>
+<script src="script.js" defer></script>
+<script src="js/forms.js" defer></script>
+<script src="js/map.js" defer></script>
+</body>
+</html>

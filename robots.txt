@@ -1,0 +1,7 @@
+# Nexus Pro | robots.txt
+# Every public page may be crawled and indexed. The thank-you page is kept out
+# of search results with a noindex meta tag (it must stay crawlable so that tag is seen).
+User-agent: *
+Allow: /
+
+Sitemap: https://nexus-pro.netlify.app/sitemap.xml
